@@ -11,6 +11,8 @@ docker run --ipc host --network host --cap-add ALL \
   -v /etc/passwd:/etc/passwd:ro \
   -v /etc/group:/etc/group:ro \
   -v /etc/shadow:/etc/shadow:ro \
+  -v /etc/sudoers:/etc/sudoers:ro \
+  -v /etc/sudoers.d:/etc/sudoers.d:ro \
   -u `id -u`:`id -g` \
   -e DISPLAY=$DISPLAY -h $HOSTNAME \
   -it --rm --privileged \
